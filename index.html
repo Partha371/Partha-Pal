@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Partha Sarathi Pal — PhD Candidate in Civil Engineering at National Taiwan University. Research in performance-based earthquake engineering, structural reliability, and post-earthquake functional recovery." />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Partha Sarathi Pal | Structural & Earthquake Engineering</title>
+  <style>
+
+    :root {
+      color-scheme: light;
+      --ink: #17283d;
+      --muted: #596a7c;
+      --navy: #122b4b;
+      --accent: #146d81;
+      --accent-deep: #0f5c6e;
+      --line: #e4e9ee;
+      --canvas: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+    body { margin: 0; background: #fff; color: var(--ink); font: 16px/1.7 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: var(--accent-deep); text-underline-offset: 4px; }
+    a:hover { color: #0c4658; }
+    a:focus-visible { outline: 3px solid #e9a543; outline-offset: 3px; }
+    .container { width: min(1170px, calc(100% - 64px)); margin-inline: auto; }
+    .site-header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.97); border-bottom: 1px solid var(--line); }
+    .nav-inner { min-height: 68px; display: flex; align-items: center; justify-content: flex-end; }
+    nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: clamp(14px, 2.2vw, 29px); }
+    nav a { color: #40536a; font-size: .91rem; font-weight: 650; text-decoration: none; }
+    nav a:hover { color: var(--accent-deep); }
+
+    /* Main layout: a genuinely wide photo column, rather than a scaled 245px box. */
+    .hero { background: #ffffff; border-bottom: 1px solid var(--line); padding: 62px 0 74px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.32fr) minmax(360px, 0.93fr); gap: clamp(36px, 4.5vw, 72px); align-items: center; }
+    .hero-copy { min-width: 0; }
+    .eyebrow { display: inline-block; margin: 0 0 14px; text-transform: uppercase; font-size: .77rem; letter-spacing: .16em; font-weight: 800; color: var(--accent-deep); }
+    h1,h2,h3 { color: var(--navy); line-height: 1.2; }
+    h1 { font-size: clamp(2.7rem, 4.9vw, 4.4rem); letter-spacing: -.05em; margin: 0 0 12px; }
+    .subtitle { color: #2f4965; font-size: clamp(1.08rem, 1.7vw, 1.36rem); font-weight: 600; margin: 0 0 18px; }
+    .intro { color: #506278; font-size: 1.035rem; max-width: 610px; margin: 0 0 27px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 18px; border-radius: 9px; font-size: .91rem; font-weight: 730; text-decoration: none; transition: background .16s ease; }
+    .btn-primary { color: white; background: var(--navy); }
+    .btn-primary:hover { background: #20476f; color: white; }
+    .btn-secondary { color: var(--navy); background: white; border: 1px solid #cbd5df; }
+    .btn-secondary:hover { background: #f6f8fb; color: var(--navy); }
+    .hero-photo { width: 100%; max-width: 470px; margin: 0; justify-self: end; }
+    .hero-photo img { width: 100%; height: auto; display: block; border-radius: 18px; object-fit: contain; }
+
+    section:not(.hero) { padding: 70px 0; }
+    .section-heading { margin-bottom: 28px; }
+    .section-heading .eyebrow { margin-bottom: 9px; }
+    h2 { font-size: clamp(1.8rem, 3vw, 2.2rem); letter-spacing: -.033em; margin: 0 0 11px; }
+    .section-description { color: var(--muted); max-width: 760px; margin: 0; }
+    .about-layout { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, .8fr); gap: 52px; align-items: start; }
+    .body-text { color: #46596c; margin: 0 0 16px; }
+    .facts { background: #fff; border: 1px solid var(--line); padding: 28px 30px; border-radius: 14px; }
+    .fact { margin-bottom: 16px; }
+    .fact:last-child { margin-bottom: 0; }
+    .fact-title { color: var(--accent-deep); font-size: .74rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+    .fact-value { color: var(--navy); font-size: .96rem; font-weight: 620; margin-top: 2px; }
+    .soft-section { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .cards { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 19px; }
+    .card { border: 1px solid var(--line); border-radius: 14px; background: white; padding: 27px; }
+    .card-index { color: var(--accent); font-size: .75rem; letter-spacing: .09em; font-weight: 800; }
+    h3 { font-size: 1.12rem; margin: 12px 0; }
+    .card p { color: var(--muted); font-size: .93rem; margin: 0; }
+    .project-stack { display: grid; gap: 0; }
+    .project { display: grid; grid-template-columns: 1fr auto; gap: 25px; padding: 26px 0; border-bottom: 1px solid var(--line); align-items: start; }
+    .project:first-child { border-top: 1px solid var(--line); }
+    .project h3 { margin: 0 0 7px; }
+    .project p { color: var(--muted); font-size: .95rem; margin: 0; }
+    .tag { white-space: nowrap; border: 1px solid #d3e4e9; color: var(--accent-deep); background: #f5fbfc; border-radius: 30px; padding: 5px 12px; font-size: .75rem; font-weight: 750; }
+    .publication { border-left: 3px solid var(--accent); padding: 6px 0 6px 24px; }
+    .pub-label { color: var(--accent-deep); font-size: .76rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+    .pub-title { color: var(--navy); font-size: 1.15rem; font-weight: 730; line-height: 1.5; margin: 0 0 10px; }
+    .pub-meta { color: var(--muted); margin: 0; }
+    .note { color: var(--muted); font-size: .9rem; margin-top: 16px; overflow-wrap: anywhere; }
+    .contact-grid { display: grid; grid-template-columns: 1.24fr .9fr; gap: 23px; align-items: stretch; }
+    .contact-box { background: var(--navy); color: #eaf2fa; border-radius: 15px; padding: 32px; }
+    .contact-box h3 { color: white; font-size: 1.35rem; margin: 0 0 10px; }
+    .contact-box p { color: #d7e2ee; margin: 0 0 19px; }
+    .contact-detail { border: 1px solid var(--line); border-radius: 15px; padding: 30px; background: white; color: var(--navy); overflow-wrap: anywhere; }
+    .contact-detail strong { display: block; margin-bottom: 10px; }
+    .contact-detail p { margin: 0; color: var(--muted); font-size: .92rem; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0; background: #fff; color: #687a89; font-size: .84rem; }
+    .footer-flex { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 15px; }
+
+    @media (max-width: 940px) {
+      .hero-grid { grid-template-columns: minmax(0,1.1fr) minmax(290px,.9fr); gap: 28px; }
+      .hero { padding: 52px 0; }
+      .hero-photo { max-width: 400px; }
+      .about-layout { gap: 25px; }
+    }
+    @media (max-width: 740px) {
+      .container { width: min(100% - 34px, 1170px); }
+      .nav-inner { min-height: 60px; }
+      nav { justify-content: center; width: 100%; gap: 12px 18px; }
+      nav a { font-size: .82rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero-photo { justify-self: center; width: min(100%, 470px); }
+      .hero { padding: 42px 0 52px; }
+      section:not(.hero) { padding: 55px 0; }
+      .about-layout, .contact-grid { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
+      .project { grid-template-columns: 1fr; gap: 10px; }
+      .tag { justify-self: start; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-inner">
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top">
+
+ 
+    <div class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Structural &amp; Earthquake Engineering</p>
+          <h1>Partha Sarathi Pal</h1>
+          <p class="subtitle">PhD Candidate · National Taiwan University</p>
+          <p class="intro">I study how structures perform during earthquakes and how buildings and communities recover afterward-connecting nonlinear structural analysis, probabilistic seismic risk, and resource-constrained recovery modeling.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#research">Explore my research</a>
+            <a class="btn btn-secondary" href="#publications">View publications</a>
+          </div>
+        </div>
+        
+
+
+
+<figure class="hero-photo">
+          <img src="Pic.jpeg" alt="Partha Sarathi Pal in Las Vegas" width="1953" height="2048" />
+        </figure>
+
+      </div>
+    </div>
+
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Background</p><h2 id="about-title">About me</h2></div>
+        <div class="about-layout">
+          <div>
+            <p class="body-text">I am a PhD candidate in the Department of Civil Engineering at National Taiwan University, working under the supervision of Professor Tung-Yu Wu.</p>
+            <p class="body-text">My doctoral research brings together seismic behavior of steel structures, collapse and loss assessment, life-cycle performance, and the modeling of post-earthquake functional recovery. I am particularly interested in connecting building-level engineering models with decision-making and resource constraints that influence recovery across a wider community.</p>
+          </div>
+          <aside class="facts" aria-label="Academic profile">
+            <div class="fact"><div class="fact-title">Affiliation</div><div class="fact-value">National Taiwan University</div></div>
+            <div class="fact"><div class="fact-title">Department</div><div class="fact-value">Civil Engineering</div></div>
+            <div class="fact"><div class="fact-title">Advisor</div><div class="fact-value">Prof. Tung-Yu Wu</div></div>
+            <div class="fact"><div class="fact-title">Current stage</div><div class="fact-value">PhD candidate</div></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="soft-section" aria-labelledby="research-title">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Research focus</p><h2 id="research-title">Research interests</h2><p class="section-description">Engineering analysis across structural, building, and recovery-system scales.</p></div>
+        <div class="cards">
+          <article class="card"><div class="card-index">01 / STRUCTURES</div><h3>Steel seismic systems</h3><p>Nonlinear behavior of steel moment frames, deep wide-flange and hollow structural section columns, collapse fragility, and design comparisons.</p></article>
+          <article class="card"><div class="card-index">02 / RISK &amp; IMPACT</div><h3>Performance-based earthquake engineering</h3><p>Probabilistic seismic risk, FEMA P-58 loss assessment, life-cycle cost, and environmental impact evaluation.</p></article>
+          <article class="card"><div class="card-index">03 / RESILIENCE</div><h3>Functional recovery</h3><p>Stochastic recovery delays, Taiwan-informed post-earthquake impeding factors, and shared engineering, permitting, and contractor constraints.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Selected work</p><h2 id="projects-title">Research projects</h2></div>
+        <div class="project-stack">
+          <article class="project"><div><h3>Steel column compactness and seismic performance</h3><p>Comparative studies of deep wide-flange and HSS columns in steel moment frames, examining collapse risk, life-cycle economics, and environmental performance across structural configurations.</p></div><span class="tag">Accepted paper</span></article>
+          <article class="project"><div><h3>Building-level post-earthquake functional recovery</h3><p>Extension of ATC-138-style recovery modeling with Taiwan-informed administrative and technical impeding-factor assumptions, applied to a representative multistory residential building.</p></div><span class="tag">Doctoral research</span></article>
+          <article class="project"><div><h3>Resource-constrained recovery at portfolio scale</h3><p>Exploration of how access to shared engineering and contractor services, scheduling rules, and competing repair demands can change simulated recovery outcomes in regional case studies.</p></div><span class="tag">Ongoing work</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="soft-section" aria-labelledby="pub-title">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Research output</p><h2 id="pub-title">Selected publication</h2><p class="section-description">A verified entry from my publication record; additional publications and DOI links can be added here.</p></div>
+        <article class="publication">
+          <p class="pub-label">Accepted · October 2026</p>
+          <p class="pub-title">Influence of steel column compactness on seismic risk, life cycle performance, and sustainability of perimeter moment frames</p>
+          <p class="pub-meta"><em>ASCE Journal of Structural Engineering</em> </p>
+        </article>
+        <p class="note">https://doi.org/10.1061/JSENDH.STENG-16751</p>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Get in touch</p><h2 id="contact-title">Contact &amp; collaboration</h2></div>
+        <div class="contact-grid">
+          <div class="contact-box">
+            <h3>Interested in collaborating?</h3>
+            <p>I welcome conversations about structural earthquake engineering, seismic risk assessment, and resilient recovery, including potential postdoctoral research collaborations.</p>
+            <a class="btn btn-secondary" href="https://www.ce.ntu.edu.tw/" target="_blank" rel="noopener noreferrer">Visit NTU Civil Engineering</a>
+          </div>
+          <aside class="contact-detail">
+            <strong>Partha Sarathi Pal</strong>
+            <p>Department of Civil Engineering<br />National Taiwan University<br />Taipei, Taiwan</p>
+            <p style="margin-top:14px"><strong style="display:inline">Email:</strong> <a href="mailto:f10521252@ntu.edu.tw">f10521252@ntu.edu.tw</a></p> 
+            <p style="margin-top:14px"><strong style="display:inline">LinkedIn:</strong> <a href="https://linkedin.com/in/partha-sarathi-pal" target="_blank" rel="noopener noreferrer">linkedin.com/in/partha-sarathi-pal</a></p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-flex"><span>© <span id="year">2026</span> Partha Sarathi Pal</span><span>Built with GitHub Pages</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
