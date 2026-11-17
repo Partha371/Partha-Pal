@@ -81,6 +81,142 @@
     @media (max-width:800px) { .hero-grid { grid-template-columns:1fr; gap:28px; } .portrait-wrap { display:none; } .cards { grid-template-columns:1fr; } .about-layout, .contact-grid { grid-template-columns:1fr; } .hero { padding:62px 0; } nav { gap:14px; } .nav-inner { align-items:flex-start; padding:16px 0; flex-direction:column; } .project { grid-template-columns:1fr; } .tag { justify-self:start; } }
     @media (max-width:480px) { .container { width:min(100% - 30px, 1100px); } section { padding:55px 0; } nav a { font-size:.83rem; } .hero { padding:55px 0; } .card, .facts, .project { padding:21px; } }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .btn { transition:none; } }
+    
+/* IMPROVED MOBILE AND TABLET LAYOUT */
+
+@media (max-width: 900px) {
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-photo {
+    width: 100%;
+    max-width: 380px;
+    justify-self: center;
+    margin: 0 auto;
+  }
+
+  .hero-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .sketch {
+    transform: none !important;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .sketch img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .portrait-wrap {
+    display: block;
+  }
+
+  .about-layout,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .container {
+    width: calc(100% - 36px);
+  }
+
+  .nav-inner {
+    min-height: auto;
+    padding: 14px 0;
+    justify-content: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 18px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 40px 0 50px;
+  }
+
+  h1 {
+    font-size: clamp(32px, 8vw, 43px);
+    letter-spacing: -1px;
+    line-height: 1.15;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .intro {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 11px 15px;
+  }
+
+  .hero-photo {
+    max-width: 350px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .tag {
+    justify-self: start;
+  }
+
+  .card,
+  .facts,
+  .contact-box,
+  .contact-detail {
+    padding: 22px;
+  }
+
+  .footer-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+}
   </style>
 </head>
 <body>
@@ -134,7 +270,7 @@
             background:white;
             overflow:hidden;
             border-radius:20px;
-            transform:scale(1.2);
+            transform:scale(1.7);
             transform-origin:right center;">
 
   <img src="Image.jpeg"
